@@ -19,7 +19,7 @@ to get the right element. **visual-selector** offers easy searching for right se
 browser without refreshing or writing some crazy `background: whatever` to find out that you are using
 right selector.
 
-##Controls
+## Controls
 
 Include script into your page. On the bottom of the page will be input, where you can write
 these commands:
@@ -32,15 +32,15 @@ hide //to hide highlight
 show //to show highlight
 ```
 
-##TODO
+## TODO
 
 This project is mainly used to learn github. So it is basic, lame
 version (which took me about 30 minutes). So this project contains a lot of to do. I have to:
 
-- [] Fix english!
-- [] Make better README.md
-- [] Make better console
-- [] Catch errors
-- [] Make a better example page
-- [] Rewrite some part of code
-- [] stop using word **better** (at least a little)
+- [ ] Fix english!
+- [ ] Make better README.md
+- [ ] Make better console
+- [ ] Catch errors
+- [ ] Make a better example page
+- [ ] Rewrite some part of code
+- [ ] stop using word **better** (at least a little)
