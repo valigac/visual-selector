@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Example page</title>
+  </head>
+  <style>
+    .query {
+      font-family: consolas;
+      font-weight: bold;
+      color: #2cc151;
+    }
+  </style>
+  <body>
+    <h1>Example page</h1>
+    <article>
+      <h2>Hello there!</h2>
+      <p>Sometimes CSS selectors could be real mess!</p>
+    </article>
+    <h2>Old friends - id, class, tags</h2>
+    <section>
+      <h3>Tag yeah!</h3>
+      <p>Show me all paragraphs! <span class="query">p</span>!</p>
+    </section>
+    <section>
+      <h3>Do it with class!</h3>
+      <p>Try <span class="query">.example</span> for class example</p>
+    </section>
+    <section>
+      <h3>Or id?</h3>
+      <p><span id="thing">Okey</span>, but would you use id only for style one <span class="query">#thing<span></p>
+    </section>
+    <h2>Pseudo what?</h2>
+    <p>Well, CSS offers a lot!</p>
+    <ul>
+      <li>ul[0], try <span class="query">ul:first-child</span></li>
+      <li class="hidden-query">Show me all query class, I mean all <span class="query">[class="query"]</span></li>
+      <li>I want query class but in li <span class="query">li .query</span></li>
+      <li>And other, magic things - I mean -  select all p that are placed immediately after ul elements <span class="query">p + ul<span class="query"></li>
+    </ul>
+    <p>try by yourself - just copy green words and paste it to "console" or make your own css magic! For more write <strong>'help'</strong></p>
+    <script src="../visual_selector.js"></script>
+  </body>
+</html>
