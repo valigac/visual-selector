@@ -5,6 +5,9 @@
     <title>Example page</title>
   </head>
   <style>
+    body {
+      font-family: verdana;
+    }
     .query {
       font-family: consolas;
       font-weight: bold;
@@ -15,30 +18,37 @@
     <h1>Example page</h1>
     <article>
       <h2>Hello there!</h2>
-      <p>Sometimes CSS selectors could be real mess!</p>
+      <p>Sometimes CSS selectors could be a real mess!</p>
     </article>
-    <h2>Old friends - id, class, tags</h2>
+    <h2>Old friends - id, class, tag</h2>
     <section>
       <h3>Tag yeah!</h3>
-      <p>Show me all paragraphs! <span class="query">p</span>!</p>
+      <p>Show me all <span class="query">p</span> tags!</p>
     </section>
     <section>
       <h3>Do it with class!</h3>
-      <p>Try <span class="query">.example</span> for class example</p>
+      <p>Try <span class="query">.example</span> to get all elements with example class</p>
     </section>
     <section>
       <h3>Or id?</h3>
-      <p><span id="thing">Okey</span>, but would you use id only for style one <span class="query">#thing<span></p>
+      <p><span id="thing">Okay</span>, but would you use id only to style one
+        <span class="query">#thing<span>?</p>
     </section>
     <h2>Pseudo what?</h2>
-    <p>Well, CSS offers a lot!</p>
+    <p>Well CSS offers a lot!</p>
     <ul>
-      <li>ul[0], try <span class="query">ul:first-child</span></li>
-      <li class="hidden-query">Show me all query class, I mean all <span class="query">[class="query"]</span></li>
-      <li>I want query class but in li <span class="query">li .query</span></li>
-      <li>And other, magic things - I mean -  select all p that are placed immediately after ul elements <span class="query">p + ul<span class="query"></li>
+      <li>li[0]? try <span class="query">li:first-child</span></li>
+      <li class="hidden-query">Show me all query class
+        <span class="query">[class="query"]</span></li>
+      <li>I want a query class but in li <span class="query">li .query</span></li>
+      <li>And other, magic things. I mean - select p that are placed immediately after ul elements
+        <span class="query">ul + p<span class="query">
+      </li>
     </ul>
-    <p>try by yourself - just copy green words and paste it to "console" or make your own css magic! For more write <strong>'help'</strong></p>
+    <p>Try it yourself - copy some <strong>"green"</strong> word and paste it to the bottom "console"!
+      Or write your own CSS selectors. For more information write <strong>"help"</strong> or
+      check README.md right <a href="https://github.com/valigac/visual-selector">here</a>
+    </p>
     <script src="../visual_selector.js"></script>
   </body>
 </html>
