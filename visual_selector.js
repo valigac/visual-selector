@@ -1,3 +1,4 @@
+/* State */
 const vsState = {
   query: 'p',
   background:  'rgba(163, 255, 35, 0.4)',
@@ -9,8 +10,43 @@ let background = vsState.background;
 let vsBoxes = [];
 let alpha = 0.4;
 
-function vsConsole() {
+function vsDrawConsole() {
   let c = document.createElement('div');
+  let btn = document.createElement('div');
+  let input = document.createElement('input');
+
+  btn.onclick = function(e) {
+    if (c.style.width === '100%')
+      c.style.width = '20px';
+    else
+      c.style.width = '100%';
+  }
+
+  input.onkeydown = function(e) {
+    if (e.key === 'Enter') {
+      vsChangeSetting(e.target.value);
+      e.target.value = '';
+    }
+  }
+
+  vsStyleConsole(c, btn, input);
+
+  let text = document.createElement('div');
+  text.innerText = 'vs_command: ';
+  text.style.fontFamily  = 'consolas';
+  text.style.position = 'absolute';
+  text.style.left = '5px';
+  text.style.bottom = '13px';
+  text.style.fontSize = '17px';
+  text.style.color = '#ef2353';
+
+  c.appendChild(text);
+  c.appendChild(input);
+  c.appendChild(btn);
+  document.body.appendChild(c);
+}
+
+function vsStyleConsole(c, btn, input) {
   c.style.width = '100%';
   c.style.height = '40px';
   c.style.backgroundColor = 'white';
@@ -21,23 +57,15 @@ function vsConsole() {
   c.style.overflow = 'hidden';
   c.style.right = '0px';
 
-  let btn = document.createElement('div');
-  btn.style.backgroundColor = '#f9d51d';
+  btn.style.backgroundColor = '#ef2353';
   btn.style.width = '10px';
   btn.style.height = '10px';
   btn.style.position = 'absolute';
-  btn.style.right = '2px';
-  btn.style.top = '2px';
+  btn.style.right = '4px';
+  btn.style.top = '4px';
+  btn.style.borderRadius = '50%';
   btn.style.cursor = 'pointer';
 
-  btn.onclick = function(e) {
-    if (c.style.width === '100%')
-      c.style.width = '20px';
-    else
-      c.style.width = '100%';
-  }
-
-  let input = document.createElement('input');
   input.type = 'text';
   input.style.fontFamily = 'consolas';
   input.style.position = 'absolute';
@@ -46,28 +74,9 @@ function vsConsole() {
   input.style.left = '115px';
   input.style.width = '80%';
   input.style.fontFamily = '20px';
-  input.style.bottom = '0px';
+  input.style.bottom = '8px';
   input.style.height = '28px';
   input.style.fontSize = '17px';
-
-  input.onkeydown = function(e) {
-    if (e.key === 'Enter') {
-      vsChangeSetting(e.target.value);
-      e.target.value = '';
-    }
-  }
-
-  let text = document.createElement('div');
-  text.innerText = 'vs_command: ';
-  text.style.fontFamily  = 'consolas';
-  text.style.position = 'absolute';
-  text.style.left = '5px';
-  text.style.bottom = '7px';
-  text.style.fontSize = '17px';
-  c.appendChild(text);
-  c.appendChild(input);
-  c.appendChild(btn);
-  document.body.appendChild(c);
 }
 
 function vsShowElements() {
@@ -98,7 +107,7 @@ function vsChangeSetting(command) {
     vsState.background = hexToRGB(command.replace('color ', ''));
     vsShowElements();
   } else if (command.trim() === 'help') {
-    alert('For selector change write the selector, for example "p" or ".class"\n' +
+    alert('To change the selector write its name, for example "p" or ".class"\n' +
     'For color change write color #hexcolor, for example "color #ff0000"');
     vsShowElements();
   } else if (command.trim() === 'show') {
@@ -123,5 +132,5 @@ window.onresize = function(e) {
   vsShowElements();
 }
 
-vsConsole()
+vsDrawConsole()
 vsShowElements();

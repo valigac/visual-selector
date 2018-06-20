@@ -1,46 +1,50 @@
 # visual-selector
 
-Small JavaScript library for easier work with CSS selectors.
+A small JavaScript library, which helps you with choosing right CSS selectors and finding HTML elements in your webpage.
+
+## How?
+
+Include **visual_selector.js**
+
+`<script src="../visual_selector.js"></script>`
+
+at the bottom of your page will be input, where you can use these commands:
+
+```
+selector_name //any css selector (for example: p, [class] etc.)
+help //to get some help
+color #hexcolor //to change color of a highlight
+hide //to hide the highlight
+show //to show the highlight
+```
 
 ## Why?
 
-**From my experience** - I often use CSS to find out
-what elements belong to group of tags with class **'box'** (for example)
+Two reasons...
+
+**From my experience** - I often use CSS to find out what elements belong to a group of tags with class **'box'** (for example)
+
 ```
 .box {
   background: green;
 }
 ```
-CSS offers a lot selectors. Imagine a situation - you want to select the second
-li in ul, but you are not sure what selector you should use. So you write one into file,
-save that file, refresh browser and nothing happened. Ok, now try another -
-write it into file, save that file, refresh browser and it works. Nice, but that was a lot action
-to get the right element. **visual-selector** offers easy searching for right selector in your
-browser without refreshing or writing some crazy `background: whatever` to find out that you are using
-right selector.
 
-## Controls
-
-Include script into your page. On the bottom of the page will be input, where you can write
-these commands:
-
-```
-selector //any css selector, for example p, [class] etc.
-help //to get some help
-color #hexcolor //to change color of highlight
-hide //to hide highlight
-show //to show highlight
-```
+CSS offers a lot selectors. Imagine a situation - you are not a CSS master. You want to select the second
+li in ul. So you write one selector in your file, save that file, refresh browser and... nothing happened.
+Ok, now try another and another until it is correct. That is a lot of action for getting right element.
+**visual-selector** offers easy searching for right selectors in your browser without refreshing or
+writing some crazy `background: whatever`.
 
 ## TODO
 
-This project is mainly used to learn github. So it is basic, lame
-version (which took me about 30 minutes). So this project contains a lot of to do. I have to:
+I have created this project to learn github. I have published basic version. Thus I can use git commands very often and make it better. I have to:
 
-- [ ] Fix english!
-- [ ] Make better README.md
-- [ ] Make better console
+- [x] Fix English! (more or less)
+- [x] Improve README.md
+- [ ] Make a better console
+- [x] Improve example page
+- [x] Stop using **better** so often (more or less, now I am using 'improve' too)
 - [ ] Catch errors
-- [ ] Make a better example page
-- [ ] Rewrite some part of code
-- [ ] stop using word **better** (at least a little)
+- [ ] Z-index fix
+- [ ] Rewrite some parts
